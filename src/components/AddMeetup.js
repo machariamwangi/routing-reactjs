@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {link} from 'react-router-dom';
+// import {link} from 'react-router-dom';
+// import { hashHistory } from 'react-router';
+
 
 export default class AddMeetup extends Component {
 
@@ -11,7 +13,7 @@ addMeetup(newMeetup){
        url: 'http://localhost:3000/api/meetupzs',
        data: newMeetup
    }).then(response =>{
-        this.props.history.push("/");
+        this.props.hashHistory.push('/');
    }).catch(err =>console.log(err));
 }
 
